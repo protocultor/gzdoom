@@ -1787,6 +1787,7 @@ CNTRLMNU_OPEN_SAVE				= "Open Save Menu";
 CNTRLMNU_OPEN_LOAD				= "Open Load Menu";
 CNTRLMNU_OPEN_OPTIONS				= "Open Options Menu";
 CNTRLMNU_OPEN_DISPLAY				= "Open Display Menu";
+CNTRLMNU_OPEN_MAIN				= "Open Main Menu";
 CNTRLMNU_QUICKSAVE				= "Quicksave";
 CNTRLMNU_QUICKLOAD				= "Quickload";
 CNTRLMNU_EXIT_TO_MAIN				= "Exit to Main Menu";

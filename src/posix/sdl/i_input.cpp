@@ -204,12 +204,16 @@ void I_SetMouseCapture()
 {
 	// Clear out any mouse movement.
 	SDL_GetRelativeMouseState (NULL, NULL);
+#if !defined(NO_GTK) || defined(__APPLE__)
 	SDL_SetRelativeMouseMode (SDL_TRUE);
+#endif
 }
 
 void I_ReleaseMouseCapture()
 {
+#if !defined(NO_GTK) || defined(__APPLE__)
 	SDL_SetRelativeMouseMode (SDL_FALSE);
+#endif
 }
 
 static void PostMouseMove (int x, int y)
@@ -280,8 +284,7 @@ static bool inGame()
 static void I_CheckNativeMouse ()
 {
 	bool focus = SDL_GetKeyboardFocus() != NULL;
-	bool fs = screen->IsFullscreen();
-	
+
 	bool wantNative = !focus || (!use_mouse || GUICapture || paused || demoplayback || !inGame());
 
 	if (wantNative != NativeMouse)

@@ -50,6 +50,9 @@ pgdn +lookup
 del +lookdown
 end centerview
 
+// Generic joystick buttons
+joy9 menu_main
+
 // Xbox 360 / PS2 controllers
 pad_a +use
 pad_y +jump
